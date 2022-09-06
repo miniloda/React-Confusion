@@ -29,6 +29,7 @@ class DishDetail extends Component{
         console.log(comments)
         if (comments != null){
             return(
+
                 <div className="col-12">
                     <h4>Comments</h4>
                     <ul className="list-unstyled">
@@ -47,6 +48,7 @@ class DishDetail extends Component{
                         )}
                     </ul>
                 </div>
+
             )
         }else{
             return;
@@ -54,6 +56,8 @@ class DishDetail extends Component{
     render(){
     if(this.props.dish != null){
         return(
+            <div className="container">
+
             <div className="row">
                 <div className="col-md-5 m-1">
                     {this.renderDish(this.props.dish)}
@@ -62,6 +66,7 @@ class DishDetail extends Component{
 
                         {this.renderComments(this.props.dish.comments)}
                 </div>
+            </div>
             </div>
         )
     }else{
